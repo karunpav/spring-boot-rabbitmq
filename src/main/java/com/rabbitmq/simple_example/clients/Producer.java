@@ -16,10 +16,10 @@ import com.rabbitmq.simple_example.assets.Order;
 
 @Component
 public class Producer {
-	
+
 	@Autowired
 	private RabbitTemplate rabbitTemplate;
-	
+
 	private static final Logger LOGGER = LoggerFactory.getLogger(Producer.class);
 	private static final String EXCHANGE = "sales_data_exchange";
 	private static final String ROUTING_KEY = "customer.order";
@@ -44,8 +44,8 @@ public class Producer {
 
 		Item item3 = new Item("Banana", 4);
 		orderItemList.add(item3);
-		
+
 		return new Order("Karun Pavithran", "3 Cityplace Drive", new Date(), orderItemList);
 	}
-	
+
 }

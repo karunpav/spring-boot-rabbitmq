@@ -5,50 +5,68 @@ import java.util.List;
 
 public class Order {
 
-	private String customerName;
-	private String deliveryAddress;
-	private Date date;
-	private List<Item> orderItems;
+    private String customerName;
+    private String deliveryAddress;
+    private Date date;
+    private List<Item> orderItems;
 
-	// Payload for the message that will be transmitted
-	public Order(String customerName, String deliveryAddress, Date date, List<Item> orderItems) {
-		super();
-		this.customerName = customerName;
-		this.deliveryAddress = deliveryAddress;
-		this.date = date;
-		this.orderItems = orderItems;
-	}
+    // Payload for the message that will be transmitted
+    public Order(String customerName, String deliveryAddress, Date date, List<Item> orderItems) {
+        super();
+        this.customerName = customerName;
+        this.deliveryAddress = deliveryAddress;
+        this.date = date;
+        this.orderItems = orderItems;
+    }
 
-	public String getCustomerName() {
-		return customerName;
-	}
+    // Default constructor
+    public Order() {
+        super();
+        this.customerName = null;
+        this.deliveryAddress = null;
+        this.date = null;
+        this.orderItems = null;
+    }
 
-	public void setCustomerName(String customerName) {
-		this.customerName = customerName;
-	}
+    public String getCustomerName() {
+        return customerName;
+    }
 
-	public String getDeliveryAddress() {
-		return deliveryAddress;
-	}
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
+    }
 
-	public void setDeliveryAddress(String deliveryAddress) {
-		this.deliveryAddress = deliveryAddress;
-	}
+    public String getDeliveryAddress() {
+        return deliveryAddress;
+    }
 
-	public Date getDate() {
-		return date;
-	}
+    public void setDeliveryAddress(String deliveryAddress) {
+        this.deliveryAddress = deliveryAddress;
+    }
 
-	public void setDate(Date date) {
-		this.date = date;
-	}
+    public Date getDate() {
+        return date;
+    }
 
-	public List<Item> getOrderItems() {
-		return orderItems;
-	}
+    public void setDate(Date date) {
+        this.date = date;
+    }
 
-	public void setOrderItems(List<Item> orderItems) {
-		this.orderItems = orderItems;
-	}
+    public List<Item> getOrderItems() {
+        return orderItems;
+    }
 
+    public void setOrderItems(List<Item> orderItems) {
+        this.orderItems = orderItems;
+    }
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "customerName='" + customerName + '\'' +
+                ", deliveryAddress='" + deliveryAddress + '\'' +
+                ", date=" + date +
+                ", orderItems=" + orderItems +
+                '}';
+    }
 }

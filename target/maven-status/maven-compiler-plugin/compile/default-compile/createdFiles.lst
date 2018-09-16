@@ -1,6 +1,0 @@
-com\rabbitmq\simple_example\assets\Order.class
-com\rabbitmq\simple_example\assets\Item.class
-com\rabbitmq\simple_example\clients\Producer.class
-com\rabbitmq\simple_example\RabbitMqConfig.class
-com\rabbitmq\simple_example\App.class
-com\rabbitmq\simple_example\clients\Consumer.class
