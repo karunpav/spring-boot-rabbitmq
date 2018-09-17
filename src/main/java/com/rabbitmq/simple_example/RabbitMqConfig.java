@@ -3,6 +3,7 @@ package com.rabbitmq.simple_example;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.amqp.support.converter.DefaultClassMapper;
@@ -18,7 +19,9 @@ public class RabbitMqConfig {
 	
 	@Bean
 	public MessageConverter jsonMessageConverter() {
-		return new Jackson2JsonMessageConverter();
+		Jackson2JsonMessageConverter jsonMessageConverter  = new Jackson2JsonMessageConverter();
+		jsonMessageConverter.setClassMapper(classMapper());
+		return jsonMessageConverter;
 	}
 	
 	// Converts POJOs to JSON

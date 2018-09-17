@@ -13,6 +13,12 @@ public class Item {
 		this.price = quantity * generatePrice();
 	}
 
+	public Item() {
+		this.name = null;
+		this.quantity = 0;
+		this.price = 0;
+	}
+
 	public String getName() {
 		return name;
 	}
@@ -45,4 +51,11 @@ public class Item {
 		return finalRes;
 	}
 
+	@Override
+	public String toString() {
+		return "Item{" +
+				"name='" + name + '\'' +
+				", quantity=" + quantity +
+				'}';
+	}
 }
